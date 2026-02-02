@@ -1,0 +1,193 @@
+/* =========================================
+   1. Variables & Reset
+   ========================================= */
+:root {
+    /* Color Palette - Slate & Blue Theme */
+    --bg-dark: #0f172a;
+    --bg-secondary: #1e293b;
+    --text-light: #f1f5f9;
+    --text-muted: #94a3b8;
+    --accent: #38bdf8;
+    --accent-hover: #0ea5e9;
+
+    /* Spacing & Layout */
+    --nav-height: 70px;
+    --container-max-width: 1200px;
+    --section-padding: 100px 20px;
+    --heading-line-height: 1.2;
+    --body-line-height: 1.8;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    line-height: var(--body-line-height);
+    font-size: 1.1rem;
+    /* Better readability */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+/* =========================================
+   2. Components
+   ========================================= */
+.container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* =========================================
+   3. Header & Navigation
+   ========================================= */
+header {
+    background-color: var(--bg-secondary);
+    height: var(--nav-height);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    font-weight: 500;
+    color: var(--text-light);
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+/* =========================================
+   4. Hero Section
+   ========================================= */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    background: linear-gradient(135deg, var(--bg-dark) 0%, #1a2333 100%);
+    margin-top: 0;
+    /* Override default section spacing if needed */
+}
+
+.hero h1 {
+    font-size: 4rem;
+    /* Larger hero heading */
+    font-weight: 800;
+    line-height: var(--heading-line-height);
+    margin-bottom: 1.5rem;
+    color: var(--text-light);
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    max-width: 600px;
+}
+
+/* =========================================
+   5. General Sections
+   ========================================= */
+section {
+    padding: var(--section-padding);
+}
+
+section h2 {
+    font-size: 3rem;
+    /* Larger section headings */
+    margin-bottom: 3rem;
+    /* More spacing below headings */
+    text-align: center;
+    color: var(--accent);
+    line-height: var(--heading-line-height);
+}
+
+section p {
+    text-align: center;
+    color: var(--text-muted);
+    max-width: 800px;
+    margin: 0 auto;
+    /* Center p text with max-width */
+    font-size: 1.15rem;
+}
+
+/* Alternate background colors for sections */
+section:nth-of-type(odd) {
+    background-color: var(--bg-secondary);
+}
+
+section:nth-of-type(even) {
+    background-color: var(--bg-dark);
+}
+
+/* Adjust top padding for first section after hero to confirm with nav links */
+#about {
+    scroll-margin-top: var(--nav-height);
+}
+
+#skills,
+#projects,
+#contact {
+    scroll-margin-top: var(--nav-height);
+}
+
+/* =========================================
+   6. Footer
+   ========================================= */
+footer {
+    background-color: var(--bg-secondary);
+    padding: 20px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}

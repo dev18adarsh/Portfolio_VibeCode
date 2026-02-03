@@ -4,15 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adarsh - Backend Developer</title>
+    <title>Adarsh | Backend Developer</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 
 <body>
+    <!-- Navbar -->
     <header>
-        <nav>
+        <nav class="navbar">
             <div class="logo">Adarsh</div>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -23,44 +24,121 @@
     </header>
 
     <main>
-        <section id="home" class="hero">
-            <h1>Hi, I'm Adarsh</h1>
-            <p>Aspiring Backend Developer | Java & Spring Boot</p>
-        </section>
-
-        <section id="about">
-            <div class="container">
-                <h2>About Me</h2>
-                <p>I am a Class 10 ICSE student focused on backend development. My journey is driven by a passion for
-                    building robust systems using Java and Spring Boot.</p>
-            </div>
-        </section>
-
-        <section id="skills">
-            <div class="container">
-                <h2>Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-card">Java</div>
-                    <div class="skill-card">HTML</div>
-                    <div class="skill-card">CSS</div>
-                    <div class="skill-card">JavaScript</div>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container hero-content">
+                <h1>Hi, I'm Adarsh</h1>
+                <p class="subtitle">Aspiring Backend Developer | Java & Spring Boot</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn primary-btn">View Projects</a>
+                    <a href="#contact" class="btn secondary-btn">Contact Me</a>
                 </div>
             </div>
         </section>
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <p><!-- Add content here --></p>
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <p>
+                        I am a Class 10 ICSE student with a strong passion for software engineering and backend systems.
+                        My journey focuses on mastering Java and Spring Boot to build scalable and efficient
+                        applications.
+                        I am constantly learning and exploring new technologies to enhance my development skills.
+                    </p>
+                </div>
+            </div>
         </section>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <p><!-- Add content here --></p>
+        <!-- Skills Section -->
+        <section id="skills" class="section alt-bg">
+            <div class="container">
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h3>Java</h3>
+                    </div>
+                    <div class="skill-card">
+                        <h3>HTML</h3>
+                    </div>
+                    <div class="skill-card">
+                        <h3>CSS</h3>
+                    </div>
+                    <div class="skill-card">
+                        <h3>JavaScript</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title">Projects</h2>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <h3>Library Management System</h3>
+                        <p>A Java-based application to manage library operations including book tracking and user
+                            management.</p>
+                        <div class="project-actions">
+                            <button class="btn sm-btn">GitHub</button>
+                            <button class="btn sm-btn">Live Demo</button>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <h3>Student Database</h3>
+                        <p>A Spring Boot REST API for managing student records with CRUD operations and database
+                            integration.</p>
+                        <div class="project-actions">
+                            <button class="btn sm-btn">GitHub</button>
+                            <button class="btn sm-btn">Live Demo</button>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="project-card">
+                        <h3>Portfolio Website</h3>
+                        <p>A personal portfolio website built with semantic HTML5 and CSS3 to showcase skills and
+                            projects.</p>
+                        <div class="project-actions">
+                            <button class="btn sm-btn">GitHub</button>
+                            <button class="btn sm-btn">Live Demo</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section alt-bg">
+            <div class="container">
+                <h2 class="section-title">Contact Me</h2>
+                <form class="contact-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="btn primary-btn submit-btn">Send Message</button>
+                </form>
+            </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Adarsh. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2026 Adarsh. All rights reserved.</p>
+        </div>
     </footer>
 
     <script src="../js/main.js"></script>

@@ -181,7 +181,34 @@ section:nth-of-type(even) {
 }
 
 /* =========================================
-   6. Footer
+   6. Skills Section
+   ========================================= */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.skill-card {
+    background-color: var(--bg-secondary);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid rgba(241, 245, 249, 0.1);
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-light);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure darker background cards on dark background sections stand out */
+section:nth-of-type(odd) .skill-card {
+    background-color: var(--bg-dark);
+}
+
+/* =========================================
+   7. Footer
    ========================================= */
 footer {
     background-color: var(--bg-secondary);
